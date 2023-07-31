@@ -7,4 +7,23 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'display-flex';
+  
+  items=[
+    "Item",
+    "Item",
+    "Item",
+    "Item",
+  ];
+  items1=[
+    "Item",
+    "Item",
+    "Item",
+    "Item",
+  ];
+  items2=[
+    "Item",
+    "Item",
+    "Item",
+    "Item",
+  ];
 }
