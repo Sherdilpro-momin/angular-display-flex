@@ -26,4 +26,62 @@ export class AppComponent {
     "Item",
     "Item",
   ];
+  contentItems=[
+    {
+      "name":"test",
+      "age":24,
+      "weight":60,
+      "fullName":"test adam",
+      "dob":"march 24th, 1998"
+    },
+    {
+      "name":"test",
+      "age":24,
+      "weight":60,
+      "fullName":"test adam",
+      "dob":"march 24th, 1998"
+    },
+    {
+      "name":"test",
+      "age":24,
+      "weight":60,
+      "fullName":"test adam",
+      "dob":"march 24th, 1998"
+    },
+    {
+      "name":"test",
+      "age":24,
+      "weight":60,
+      "fullName":"test adam",
+      "dob":"march 24th, 1998"
+    },
+    {
+      "name":"test",
+      "age":24,
+      "weight":60,
+      "fullName":"test adam",
+      "dob":"march 24th, 1998"
+    },
+    {
+      "name":"test",
+      "age":24,
+      "weight":60,
+      "fullName":"test adam",
+      "dob":"march 24th, 1998"
+    },
+    {
+      "name":"test",
+      "age":24,
+      "weight":60,
+      "fullName":"test adam",
+      "dob":"march 24th, 1998"
+    },
+    {
+      "name":"test",
+      "age":24,
+      "weight":60,
+      "fullName":"test adam",
+      "dob":"march 24th, 1998"
+    }
+  ]
 }

@@ -1,13 +1,12 @@
-
 <div class="main-container" style="width: 30%;float: left;">
   <header class="custom-header">
     <!-- Your header content goes here -->
-      <!-- Header items go here -->
-  <div class="header-content">
+    <!-- Header items go here -->
+    <div class="header-content">
       <span>Header</span>
       <span *ngFor="let item of items;let i = index">{{ item+' '+(i+1)}}</span>
-  </div>
-      <!-- Add more header items as needed -->
+    </div>
+    <!-- Add more header items as needed -->
   </header>
 
   <main class="content">
@@ -15,7 +14,8 @@
     <h4>content</h4>
     <hr>
     <button (click)="items.push('Item')"> add</button>
-    <br><hr>
+    <br>
+    <hr>
     <button (click)="items.pop()"> remove</button>
   </main>
 
@@ -27,12 +27,12 @@
 <div class="main-container" style="width: 30%;float: left;">
   <header class="custom-header">
     <!-- Your header content goes here -->
-      <!-- Header items go here -->
-  <div class="header-content">
+    <!-- Header items go here -->
+    <div class="header-content">
       <span>Header</span>
       <span *ngFor="let item of items1;let i = index">{{ item+' '+(i+1)}}</span>
-  </div>
-      <!-- Add more header items as needed -->
+    </div>
+    <!-- Add more header items as needed -->
   </header>
 
   <main class="content">
@@ -40,8 +40,10 @@
     <h4>content</h4>
     <hr>
     <button (click)="items1.push('Item')"> add</button>
-    <br><hr>
+    <br>
+    <hr>
     <button (click)="items1.pop()"> remove</button>
+
   </main>
 
   <!-- <footer class="footer">
@@ -52,12 +54,12 @@
 <div class="main-container" style="width: 40%;">
   <header class="custom-header">
     <!-- Your header content goes here -->
-      <!-- Header items go here -->
-  <div class="header-content">
+    <!-- Header items go here -->
+    <div class="header-content">
       <span>Header</span>
       <span *ngFor="let item of items2;let i = index">{{ item+' '+(i+1)}}</span>
-  </div>
-      <!-- Add more header items as needed -->
+    </div>
+    <!-- Add more header items as needed -->
   </header>
 
   <main class="content">
@@ -65,8 +67,41 @@
     <h4>content</h4>
     <hr>
     <button (click)="items2.push('Item')"> add</button>
-    <br><hr>
+    <br>
+    <hr>
     <button (click)="items2.pop()"> remove</button>
+    <hr>
+    <button (click)="contentItems.push({
+      'name':'test',
+      'age':24,
+      'weight':60,
+      'fullName':'test adam',
+      'dob':'march 24th, 1998'
+    })"> add row</button>
+    <br>
+    <hr>
+    <button (click)="contentItems.pop()"> remove row</button>
+    <hr>
+    <div class="table-container">
+      <table>
+        <thead>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Full Name</th>
+          <th>Weight</th>
+          <th>DOB</th>
+        </thead>
+        <tbody>
+        <tr *ngFor="let content of contentItems;let i = index">
+          <td>{{content.name+' '+(i+1)}}</td>
+          <td>{{content.age}}</td>
+          <td>{{content.fullName+' '+(i+1)}}</td>
+          <td>{{content.weight}}</td>
+          <td>{{content.dob}}</td>
+        </tr>
+      </tbody>
+      </table>
+    </div>
   </main>
 
   <!-- <footer class="footer">
