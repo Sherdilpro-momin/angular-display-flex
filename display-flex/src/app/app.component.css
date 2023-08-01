@@ -11,7 +11,8 @@
   }
   
   .custom-header {
-    background-color: #333;
+    /* background-color: #333; */
+    background: linear-gradient(to bottom, #333 49px, transparent 49px);
     /* border: 2px solid rgb(250, 9, 9) ; */
     color: #fff;
     padding: 10px;
@@ -36,4 +37,8 @@
     background-color: #555;
     margin: 5px;
     white-space: nowrap; /* Prevents items from wrapping to the next line */
+  }
+  table
+  {
+    width: 100%;
   }

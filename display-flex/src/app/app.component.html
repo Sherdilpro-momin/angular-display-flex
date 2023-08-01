@@ -1,4 +1,8 @@
 <div class="main-container" style="width: 30%;float: left;">
+  
+
+ <!-- AG Grid Angular Component -->
+ <div class="ag-grid-container">
   <header class="custom-header">
     <!-- Your header content goes here -->
     <!-- Header items go here -->
@@ -8,16 +12,19 @@
     </div>
     <!-- Add more header items as needed -->
   </header>
+  <ag-grid-angular
+    style="flex: 1 1 auto;"
+    class="ag-theme-alpine"
+    [columnDefs]="columnDefs"
+    [defaultColDef]="defaultColDef"
+    [rowData]="rowData$ | async"
+    [rowSelection]="'multiple'"
+    [animateRows]="true"
+    (gridReady)="onGridReady($event)"
+    (cellClicked)="onCellClicked($event)"
+  ></ag-grid-angular>
+</div>
 
-  <main class="content">
-    <!-- Content goes here -->
-    <h4>content</h4>
-    <hr>
-    <button (click)="items.push('Item')"> add</button>
-    <br>
-    <hr>
-    <button (click)="items.pop()"> remove</button>
-  </main>
 
   <!-- <footer class="footer">
     //Footer content goes here
@@ -39,10 +46,10 @@
     <!-- Content goes here -->
     <h4>content</h4>
     <hr>
-    <button (click)="items1.push('Item')"> add</button>
+    <button (click)="items.push('Item')"> add</button>
     <br>
     <hr>
-    <button (click)="items1.pop()"> remove</button>
+    <button (click)="items.pop()"> remove</button>
 
   </main>
 
@@ -76,7 +83,9 @@
       'age':24,
       'weight':60,
       'fullName':'test adam',
-      'dob':'march 24th, 1998'
+      'dob':'march 24th, 1998',
+      'country':'Pakistan',
+      'city':'Lahore'
     })"> add row</button>
     <br>
     <hr>
@@ -90,16 +99,22 @@
           <th>Full Name</th>
           <th>Weight</th>
           <th>DOB</th>
+          <th>Country</th>
+          <th>City</th>
+          <!-- <th>Address</th> -->
         </thead>
         <tbody>
-        <tr *ngFor="let content of contentItems;let i = index">
-          <td>{{content.name+' '+(i+1)}}</td>
-          <td>{{content.age}}</td>
-          <td>{{content.fullName+' '+(i+1)}}</td>
-          <td>{{content.weight}}</td>
-          <td>{{content.dob}}</td>
-        </tr>
-      </tbody>
+          <tr *ngFor="let content of contentItems;let i = index">
+            <td>{{content.name+' '+(i+1)}}</td>
+            <td>{{content.age}}</td>
+            <td>{{content.fullName+' '+(i+1)}}</td>
+            <td>{{content.weight}}</td>
+            <td>{{content.dob}}</td>
+            <td>{{content.country}}</td>
+            <td>{{content.city}}</td>
+            <!-- <td>{{content.city +' , '+content.country }}</td> -->
+          </tr>
+        </tbody>
       </table>
     </div>
   </main>

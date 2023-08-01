@@ -1,6 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
-body
-{
+@import 'ag-grid-community/styles/ag-grid.css';
+@import 'ag-grid-community/styles/ag-theme-alpine.css';
+
+html, body {
+    height: 100%;
+    width: 100%;
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
 }
+  /* your-component.scss */
+.ag-grid-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    height: 100%;
+  }
+  
