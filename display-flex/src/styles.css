@@ -10,11 +10,4 @@ html, body {
     box-sizing: border-box;
     -webkit-overflow-scrolling: touch;
 }
-  /* your-component.scss */
-.ag-grid-container {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 auto;
-    height: 100%;
-  }
   
